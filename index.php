@@ -1,4 +1,7 @@
+<?php
+include 'header.php'; 
 
+?>
 <!doctype html>
 <html class="no-js" lang="zxx">
 <head>
@@ -608,7 +611,7 @@ html{
         <div class="tradingview-widget-container">
   <div class="tradingview-widget-container__widget"></div>
   <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
-  <!-- <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
   {
   "symbols": [
     {
@@ -641,7 +644,7 @@ html{
   "colorTheme": "dark",
   "locale": "en"
 }
-  </script> -->
+  </script>
 </div>
         <section class="about-area section-padding2">
             <div class="container">
