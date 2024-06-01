@@ -3141,9 +3141,9 @@ nav.nav-menu-show {
     }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 375px) {
     .about-area .about-img .about-font-img img {
-        width: 100%
+        width: 100%;
     }
 }
 
@@ -3154,12 +3154,24 @@ nav.nav-menu-show {
     top: 43px
 }
 
-@media (max-width: 575px) {
+@media (max-width: 375px) {
     .about-area .about-img .about-back-img img {
-        width: 90%
+        width: 356px;
     }
 }
+.responsive-img{
+    width: 456px; 
+    height: 635px;
+    
+}
 
+@media only screen and (max-width: 600px) {
+    .responsive-img {
+        width: 100%; /* Ensure the image takes full width on small screens */
+        height: auto; /* Maintain aspect ratio */
+        z-index: 1;
+    }
+}
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .about-area .about-img .about-back-img {
         right: 147px
@@ -3392,6 +3404,7 @@ nav.nav-menu-show {
 
 .experience-area .experience-caption {
     padding-top: 120px;
+    margin-top: 10px;
     padding-bottom: 120px;
     position: relative;
     z-index: 1
@@ -3460,40 +3473,44 @@ nav.nav-menu-show {
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
     .starups-area .starups {
-        padding-right: 35px
+        padding-right: 35px;
+        width: 100%;
     }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
     .starups-area .starups {
-        padding: 0 30px
+        padding: 0 30px;
+        width: 100%;
     }
 }
 
 @media (max-width: 575px) {
     .starups-area .starups {
-        padding: 0 30px
+        padding: 0 30px;
+        width: 100%;
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .starups-area .starups {
         width: 100%;
-        height: 500px
+        height: 600px
     }
 }
 
-@media (max-width: 575px) {
+
+@media (max-width: 300px)  {
     .starups-area .starups {
         width: 100%;
-        height: 400px
+        height: 600px
     }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
     .starups-area .starups {
         width: 100%;
-        height: 400px
+        height: 600px
     }
 }
 
@@ -3667,8 +3684,9 @@ nav.nav-menu-show {
 
 .testimonial-area .testimonial-caption .testimonial-top-cap img {
     margin-bottom: 50px;
+    margin-top: 20px;
     width: auto;
-    display: inline-block
+    display: inline-block;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -3679,7 +3697,8 @@ nav.nav-menu-show {
 
 @media (max-width: 575px) {
     .testimonial-area .testimonial-caption .testimonial-top-cap img {
-        margin-bottom: 30px
+        margin-bottom: 30px;
+        
     }
 }
 
@@ -3720,11 +3739,12 @@ nav.nav-menu-show {
     }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 575px) and (max-width:300px) {
     .testimonial-area .testimonial-caption .testimonial-top-cap p {
         font-size: 15px;
         padding-right: 0px;
-        margin-bottom: 60px
+        margin-bottom: 60px;
+        padding: 50px;
     }
 }
 
