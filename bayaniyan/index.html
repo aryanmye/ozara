@@ -24,7 +24,12 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
-
+<style>
+    html
+    {
+        scroll-behavior: smooth;
+    }
+</style>
 <body>
     <!-- Topbar Start -->
     <div class="container-fluid bg-dark">
@@ -64,7 +69,7 @@
                 <div class="navbar-nav m-auto py-0">
                     <a href="index.html" class="nav-item nav-link active">Home</a>
                     <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="price.html" class="nav-item nav-link">Price</a>
+                    <a href="index.html#pricing" class="nav-item nav-link">Price</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Services</a>
                         <div class="dropdown-menu rounded-0 m-0">
@@ -83,7 +88,7 @@
                     </div>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
-                <a href="quote.html" class="btn btn-primary py-2 px-4 d-none d-lg-block">Get A Quote</a>
+                <a href="contact.html" class="btn btn-primary py-2 px-4 d-none d-lg-block">Get A Quote</a>
             </div>
         </nav>
     </div>
@@ -278,105 +283,30 @@
 
 
     <!-- Pricing Plan Start -->
-    <div class="container-fluid pt-5">
+    <div class="container-fluid pt-5" id="pricing">
         <div class="container">
             <div class="text-center pb-2">
                 <h6 class="text-primary text-uppercase font-weight-bold">Pricing Plan</h6>
-                <h1 class="mb-4">Single Box Plans (Manila)</h1>
+                <h1 class="mb-4">Our Pricing Plans For Boxes ( all fig in AED )</h1>
             </div>
             <div class="row">
                 <div class="col-md-4 mb-5">
                     <div class="bg-secondary">
-                        <div class="text-center p-4">
-                            <h1 class="display-4 mb-0">
-                                <small class="align-top text-muted font-weight-medium" style="font-size: 22px; line-height: 45px;">AED</small>100<small class="align-bottom text-muted font-weight-medium" style="font-size: 16px; line-height: 40px;"></small>
-                            </h1>
-                        </div>
-                        <div class="bg-primary text-center p-4">
-                            <h3 class="m-0">45x45x45</h3>
-                        </div>
-                        <div class="d-flex flex-column align-items-center py-4">
-                            <p>City: Manila</p>
-                            <p>Box Size: Bulilit / Small</p>
-                            <p>Delivery Time: 45 to 60 Days</p>
-                            
-                            <a href="" class="btn btn-primary py-2 px-4 my-2">See More</a>
-                        </div>
+                        <img src="pricing/singlebox.png" height="340px;">
                     </div>
                 </div>
+                <div class="col-md-4 mb-5" style="margin-left: 108px;">
+                    <div class="bg-secondary">
+                        <img src="pricing/combobox.png" height="340px;">
+                    </div>
+                </div>
+               
                 <div class="col-md-4 mb-5">
                     <div class="bg-secondary">
-                        <div class="text-center p-4">
-                            <h1 class="display-4 mb-0">
-                                <small class="align-top text-muted font-weight-medium" style="font-size: 22px; line-height: 45px;">AED</small>130<small class="align-bottom text-muted font-weight-medium" style="font-size: 16px; line-height: 40px;"></small>
-                            </h1>
-                        </div>
-                        <div class="bg-primary text-center p-4">
-                            <h3 class="m-0">45x45x75</h3>
-                        </div>
-                        <div class="d-flex flex-column align-items-center py-4">
-                            <p>City: Manila</p>
-                            <p>Box Size: Medium / Regular</p>
-                            <p>Delivery Time: 45 to 60 Days</p>
-                            <a href="" class="btn btn-primary py-2 px-4 my-2">See More</a>
-                        </div>
+                        
                     </div>
                 </div>
-                <div class="col-md-4 mb-5">
-                    <div class="bg-secondary">
-                        <div class="text-center p-4">
-                            <h1 class="display-4 mb-0">
-                                <small class="align-top text-muted font-weight-medium" style="font-size: 22px; line-height: 45px;">AED</small>220<small class="align-bottom text-muted font-weight-medium" style="font-size: 16px; line-height: 40px;"></small>
-                            </h1>
-                        </div>
-                        <div class="bg-primary text-center p-4">
-                            <h3 class="m-0">58x58x76</h3>
-                        </div>
-                        <div class="d-flex flex-column align-items-center py-4">
-                            <p>City: Manila</p>
-                            <p>Box Size: Jumbo / Large</p>
-                            <p>Delivery Time: 45 to 60 Days</p>
-                            
-                            <a href="" class="btn btn-primary py-2 px-4 my-2">See More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-5">
-                    <div class="bg-secondary">
-                        <div class="text-center p-4">
-                            <h1 class="display-4 mb-0">
-                                <small class="align-top text-muted font-weight-medium" style="font-size: 22px; line-height: 45px;">AED</small>250<small class="align-bottom text-muted font-weight-medium" style="font-size: 16px; line-height: 40px;"></small>
-                            </h1>
-                        </div>
-                        <div class="bg-primary text-center p-4">
-                            <h3 class="m-0">58x58x92</h3>
-                        </div>
-                        <div class="d-flex flex-column align-items-center py-4">
-                            <p>City: Manila</p>
-                            <p>Box Size: Super Jumbo</p>
-                            <p>Delivery Time: 45 to 60 Days</p>
-                            <a href="" class="btn btn-primary py-2 px-4 my-2">See More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-5">
-                    <div class="bg-secondary">
-                        <div class="text-center p-4">
-                            <h1 class="display-4 mb-0">
-                                <small class="align-top text-muted font-weight-medium" style="font-size: 22px; line-height: 45px;">AED</small>300<small class="align-bottom text-muted font-weight-medium" style="font-size: 16px; line-height: 40px;"></small>
-                            </h1>
-                        </div>
-                        <div class="bg-primary text-center p-4">
-                            <h3 class="m-0">53x71x92</h3>
-                        </div>
-                        <div class="d-flex flex-column align-items-center py-4">
-                            <p>City: Manila</p>
-                            <p>Box Size: Mega Jumbo</p>
-                            <p>Delivery Time: 45 to 60 Days</p>
-                            <a href="" class="btn btn-primary py-2 px-4 my-2">See More</a>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>
@@ -385,101 +315,21 @@
         <div class="container">
             <div class="text-center pb-2">
                 <h6 class="text-primary text-uppercase font-weight-bold">Pricing Plan</h6>
-                <h1 class="mb-4">Single Box Plans (Luzon)</h1>
+                <h1 class="mb-4">Our Pricing Plans For Drums ( all fig in AED )</h1>
             </div>
             <div class="row">
                 <div class="col-md-4 mb-5">
                     <div class="bg-secondary">
-                        <div class="text-center p-4">
-                            <h1 class="display-4 mb-0">
-                                <small class="align-top text-muted font-weight-medium" style="font-size: 22px; line-height: 45px;">AED</small>110<small class="align-bottom text-muted font-weight-medium" style="font-size: 16px; line-height: 40px;"></small>
-                            </h1>
-                        </div>
-                        <div class="bg-primary text-center p-4">
-                            <h3 class="m-0">45x45x45</h3>
-                        </div>
-                        <div class="d-flex flex-column align-items-center py-4">
-                            <p>City: Luzon</p>
-                            <p>Box Size: Bulilit / Small</p>
-                            <p>Delivery Time: 45 to 60 Days</p>
-                            
-                            <a href="" class="btn btn-primary py-2 px-4 my-2">See More</a>
-                        </div>
+                        <img src="pricing/drum.png" height="340px;" width="1140px;">
                     </div>
+                </div>               
+            </div>
+            <div class="row">
+            <div class="col-md-4 mb-5">
+                <div class="bg-secondary">
+                    <img src="pricing/drumbulit.png" height="340px;" width="1140px;">
                 </div>
-                <div class="col-md-4 mb-5">
-                    <div class="bg-secondary">
-                        <div class="text-center p-4">
-                            <h1 class="display-4 mb-0">
-                                <small class="align-top text-muted font-weight-medium" style="font-size: 22px; line-height: 45px;">AED</small>140<small class="align-bottom text-muted font-weight-medium" style="font-size: 16px; line-height: 40px;"></small>
-                            </h1>
-                        </div>
-                        <div class="bg-primary text-center p-4">
-                            <h3 class="m-0">45x45x75</h3>
-                        </div>
-                        <div class="d-flex flex-column align-items-center py-4">
-                            <p>City: Luzon</p>
-                            <p>Box Size: Medium / Regular</p>
-                            <p>Delivery Time: 45 to 60 Days</p>
-                            <a href="" class="btn btn-primary py-2 px-4 my-2">See More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-5">
-                    <div class="bg-secondary">
-                        <div class="text-center p-4">
-                            <h1 class="display-4 mb-0">
-                                <small class="align-top text-muted font-weight-medium" style="font-size: 22px; line-height: 45px;">AED</small>230<small class="align-bottom text-muted font-weight-medium" style="font-size: 16px; line-height: 40px;"></small>
-                            </h1>
-                        </div>
-                        <div class="bg-primary text-center p-4">
-                            <h3 class="m-0">58x58x76</h3>
-                        </div>
-                        <div class="d-flex flex-column align-items-center py-4">
-                            <p>City: Luzon</p>
-                            <p>Box Size: Jumbo / Large</p>
-                            <p>Delivery Time: 45 to 60 Days</p>
-                            
-                            <a href="" class="btn btn-primary py-2 px-4 my-2">See More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-5">
-                    <div class="bg-secondary">
-                        <div class="text-center p-4">
-                            <h1 class="display-4 mb-0">
-                                <small class="align-top text-muted font-weight-medium" style="font-size: 22px; line-height: 45px;">AED</small>260<small class="align-bottom text-muted font-weight-medium" style="font-size: 16px; line-height: 40px;"></small>
-                            </h1>
-                        </div>
-                        <div class="bg-primary text-center p-4">
-                            <h3 class="m-0">58x58x92</h3>
-                        </div>
-                        <div class="d-flex flex-column align-items-center py-4">
-                            <p>City: Luzon</p>
-                            <p>Box Size: Super Jumbo</p>
-                            <p>Delivery Time: 45 to 60 Days</p>
-                            <a href="" class="btn btn-primary py-2 px-4 my-2">See More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-5">
-                    <div class="bg-secondary">
-                        <div class="text-center p-4">
-                            <h1 class="display-4 mb-0">
-                                <small class="align-top text-muted font-weight-medium" style="font-size: 22px; line-height: 45px;">AED</small>320<small class="align-bottom text-muted font-weight-medium" style="font-size: 16px; line-height: 40px;"></small>
-                            </h1>
-                        </div>
-                        <div class="bg-primary text-center p-4">
-                            <h3 class="m-0">53x71x92</h3>
-                        </div>
-                        <div class="d-flex flex-column align-items-center py-4">
-                            <p>City: Luzon</p>
-                            <p>Box Size: Mega Jumbo</p>
-                            <p>Delivery Time: 45 to 60 Days</p>
-                            <a href="" class="btn btn-primary py-2 px-4 my-2">See More</a>
-                        </div>
-                    </div>
-                </div>
+            </div>
             </div>
         </div>
     </div>
@@ -488,104 +338,20 @@
         <div class="container">
             <div class="text-center pb-2">
                 <h6 class="text-primary text-uppercase font-weight-bold">Pricing Plan</h6>
-                <h1 class="mb-4">Single Box Plans (Visayas)</h1>
+                <h1 class="mb-4">Our Pricing Plans For Air Cargo ( all fig in AED )</h1>
             </div>
             <div class="row">
                 <div class="col-md-4 mb-5">
                     <div class="bg-secondary">
-                        <div class="text-center p-4">
-                            <h1 class="display-4 mb-0">
-                                <small class="align-top text-muted font-weight-medium" style="font-size: 22px; line-height: 45px;">AED</small>120<small class="align-bottom text-muted font-weight-medium" style="font-size: 16px; line-height: 40px;"></small>
-                            </h1>
-                        </div>
-                        <div class="bg-primary text-center p-4">
-                            <h3 class="m-0">45x45x45</h3>
-                        </div>
-                        <div class="d-flex flex-column align-items-center py-4">
-                            <p>City: Visayas</p>
-                            <p>Box Size: Bulilit / Small</p>
-                            <p>Delivery Time: 60 to 90 Days</p>
-                            
-                            <a href="" class="btn btn-primary py-2 px-4 my-2">See More</a>
-                        </div>
+                        <img src="pricing/aircargo.png" height="340px;" width="1140px;">
                     </div>
-                </div>
-                <div class="col-md-4 mb-5">
-                    <div class="bg-secondary">
-                        <div class="text-center p-4">
-                            <h1 class="display-4 mb-0">
-                                <small class="align-top text-muted font-weight-medium" style="font-size: 22px; line-height: 45px;">AED</small>160<small class="align-bottom text-muted font-weight-medium" style="font-size: 16px; line-height: 40px;"></small>
-                            </h1>
-                        </div>
-                        <div class="bg-primary text-center p-4">
-                            <h3 class="m-0">45x45x75</h3>
-                        </div>
-                        <div class="d-flex flex-column align-items-center py-4">
-                            <p>City: Visayas</p>
-                            <p>Box Size: Medium / Regular</p>
-                            <p>Delivery Time: 60 to 90 Days</p>
-                            <a href="" class="btn btn-primary py-2 px-4 my-2">See More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-5">
-                    <div class="bg-secondary">
-                        <div class="text-center p-4">
-                            <h1 class="display-4 mb-0">
-                                <small class="align-top text-muted font-weight-medium" style="font-size: 22px; line-height: 45px;">AED</small>260<small class="align-bottom text-muted font-weight-medium" style="font-size: 16px; line-height: 40px;"></small>
-                            </h1>
-                        </div>
-                        <div class="bg-primary text-center p-4">
-                            <h3 class="m-0">58x58x76</h3>
-                        </div>
-                        <div class="d-flex flex-column align-items-center py-4">
-                            <p>City: Visayas</p>
-                            <p>Box Size: Jumbo / Large</p>
-                            <p>Delivery Time: 60 to 90 Days</p>
-                            
-                            <a href="" class="btn btn-primary py-2 px-4 my-2">See More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-5">
-                    <div class="bg-secondary">
-                        <div class="text-center p-4">
-                            <h1 class="display-4 mb-0">
-                                <small class="align-top text-muted font-weight-medium" style="font-size: 22px; line-height: 45px;">AED</small>300<small class="align-bottom text-muted font-weight-medium" style="font-size: 16px; line-height: 40px;"></small>
-                            </h1>
-                        </div>
-                        <div class="bg-primary text-center p-4">
-                            <h3 class="m-0">58x58x92</h3>
-                        </div>
-                        <div class="d-flex flex-column align-items-center py-4">
-                            <p>City: Visayas</p>
-                            <p>Box Size: Super Jumbo</p>
-                            <p>Delivery Time: 60 to 90 Days</p>
-                            <a href="" class="btn btn-primary py-2 px-4 my-2">See More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-5">
-                    <div class="bg-secondary">
-                        <div class="text-center p-4">
-                            <h1 class="display-4 mb-0">
-                                <small class="align-top text-muted font-weight-medium" style="font-size: 22px; line-height: 45px;">AED</small>340<small class="align-bottom text-muted font-weight-medium" style="font-size: 16px; line-height: 40px;"></small>
-                            </h1>
-                        </div>
-                        <div class="bg-primary text-center p-4">
-                            <h3 class="m-0">53x71x92</h3>
-                        </div>
-                        <div class="d-flex flex-column align-items-center py-4">
-                            <p>City: Visayas</p>
-                            <p>Box Size: Mega Jumbo</p>
-                            <p>Delivery Time: 60 to 90 Days</p>
-                            <a href="" class="btn btn-primary py-2 px-4 my-2">See More</a>
-                        </div>
-                    </div>
-                </div>
+                </div>               
             </div>
+            
         </div>
     </div>
+
+   
 
 
     <!-- Pricing Plan End -->
