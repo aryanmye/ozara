@@ -73,6 +73,14 @@
                             <a href="air.html" class="dropdown-item">Air Freights</a>
                         </div>
                     </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Ecommerce solutions</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <a href="land.html" class="dropdown-item">Cash on delivery</a>
+                            <a href="sea.html" class="dropdown-item">Cash on pickup</a>
+                            <a href="air.html" class="dropdown-item">Pay collect</a>
+                        </div>
+                    </div>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
                 <a href="quote.html" class="btn btn-primary py-2 px-4 d-none d-lg-block">Get A Quote</a>
@@ -169,19 +177,22 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="bg-primary py-5 px-4 px-sm-5">
-                        <form class="py-5">
+                        <form class="py-5" action="getaquote.php" method="post">
                             <div class="form-group">
-                                <input type="text" class="form-control border-0 p-4" placeholder="Your Name" required="required" />
+                                <input type="text" id="name" class="form-control border-0 p-4" placeholder="Your Name" required="required" />
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control border-0 p-4" placeholder="Your Email" required="required" />
+                                <input type="text" id="subject" class="form-control border-0 p-4" placeholder="Your Need" required="required" />
                             </div>
                             <div class="form-group">
-                                <select class="custom-select border-0 px-4" style="height: 47px;">
+                                <input type="email" id="mail" class="form-control border-0 p-4" placeholder="Your Email" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <select class="custom-select border-0 px-4" id="service" style="height: 47px;">
                                     <option selected>Select A Service</option>
-                                    <option value="1">Air Freight</option>
-                                    <option value="2">Land Freight</option>
-                                    <option value="3">Sea Freight</option>
+                                    <option value="air freight">Air Freight</option>
+                                    <option value="land freight">Land Freight</option>
+                                    <option value="sea freight">Sea Freight</option>
                                 </select>
                             </div>
                             <div>
