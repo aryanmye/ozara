@@ -7,6 +7,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -24,7 +25,51 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
+<style>
+    .whatsapp_float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 40px;
+      right: 40px;
+      background-color: #25d366;
+      color: #fff;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 3px #999;
+      z-index: 100;
+    }
+    .whatsapp-icon {
+      margin-top: 16px;
+    }
 
+    /* for mobile */
+    @media screen and (max-width: 767px){
+      .whatsapp-icon {
+        margin-top: 10px;
+      }
+      .whatsapp_float {
+        width: 40px;
+        height: 40px;
+        bottom: 20px;
+        right: 10px;
+        font-size: 22px;
+      }
+    }
+    #logo img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 576px) {
+            #logo {
+                margin-left: 0 !important;
+                text-align: center;
+                width: 100%;
+            }
+        }
+</style>
 <body>
     <!-- Topbar Start -->
     <div class="container-fluid bg-dark">
@@ -54,7 +99,7 @@
     <!-- Navbar Start -->
     <div class="container-fluid p-0">
         <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
-            <a href="index.html" class="navbar-brand ml-lg-3">
+            <a href="index.html" class="navbar-brand ml-lg-3" id="logo">
                <img src="img/logo.png">
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -68,20 +113,20 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Services</a>
                         <div class="dropdown-menu rounded-0 m-0">
-                            <a href="land.html" class="dropdown-item">Land Freights</a>
-                            <a href="sea.html" class="dropdown-item">Sea Freights</a>
-                            <a href="air.html" class="dropdown-item">Air Freights</a>
+                            <a href="landfreight.html" class="dropdown-item">Land Freights</a>
+                            <a href="seafreight.html" class="dropdown-item">Sea Freights</a>
+                            <a href="airfreight.html" class="dropdown-item">Air Freights</a>
                         </div>
                     </div>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Ecommerce solutions</a>
                         <div class="dropdown-menu rounded-0 m-0">
                             <a href="land.html" class="dropdown-item">Cash on delivery</a>
-                            <a href="sea.html" class="dropdown-item">Cash on pickup</a>
-                            <a href="air.html" class="dropdown-item">Pay collect</a>
                         </div>
                     </div>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="https:/wa.me/971553454629"  target="_blank" class="whatsapp_float"><i class="fa-brands fa-whatsapp whatsapp-icon"></i></a>
+
                 </div>
                 <a href="https:/wa.me/971553454629" class="btn btn-primary py-2 px-4 d-none d-lg-block">Get A Quote</a>
             </div>
@@ -432,22 +477,7 @@
 			
                 </p>
             </div>
-            <div class="col-lg-6 text-center text-md-right">
-                <ul class="nav d-inline-flex">
-                    <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">Privacy</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">Terms</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">FAQs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">Help</a>
-                    </li>
-                </ul>
-            </div>
+            
         </div>
     </div>
     <!-- Footer End -->

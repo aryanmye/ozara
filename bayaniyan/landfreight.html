@@ -60,6 +60,25 @@
         font-size: 22px;
       }
     }
+    #logo img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 576px) {
+            #logo {
+                margin-left: 0 !important;
+                text-align: center;
+                width: 100%;
+            }
+        }
+
+    #deliveryman img 
+    {
+        width: 100%;
+        height: auto;
+    }
+    
 </style>
 <body>
     <!-- Topbar Start -->
@@ -90,7 +109,7 @@
     <!-- Navbar Start -->
     <div class="container-fluid p-0">
         <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
-            <a href="index.html" class="navbar-brand ml-lg-3">
+            <a href="index.html" class="navbar-brand ml-lg-3" id="logo">
                <img src="img/logo.png">
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -113,8 +132,6 @@
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Ecommerce solutions</a>
                         <div class="dropdown-menu rounded-0 m-0">
                             <a href="land.html" class="dropdown-item">Cash on delivery</a>
-                            <a href="sea.html" class="dropdown-item">Cash on pickup</a>
-                            <a href="air.html" class="dropdown-item">Pay collect</a>
                         </div>
                     </div>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
@@ -191,7 +208,7 @@
                     </div>
                 </div>
                 <div class="col-lg-5">
-                    <div class="bg-primary py-5 px-4 px-sm-5">
+                    <div class="bg-primary py-5 px-4 px-sm-5" id="deliveryman">
                         <img src="img/deliveryman1.png" height="500px;">
                     </div>
                 </div>
@@ -312,22 +329,7 @@
 			
                 </p>
             </div>
-            <div class="col-lg-6 text-center text-md-right">
-                <ul class="nav d-inline-flex">
-                    <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">Privacy</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">Terms</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">FAQs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">Help</a>
-                    </li>
-                </ul>
-            </div>
+           
         </div>
     </div>
     <!-- Footer End -->
