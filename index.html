@@ -38,7 +38,17 @@ html{
 .testimonial-top-cap{
     margin-top: 10px;
 }
+.fade-in-left {
+            opacity: 0;
+            transform: translateX(-50px); /* Start 50px to the left */
+            transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
+        }
 
+        /* Final state with animation applied */
+        .fade-in-left.active {
+            opacity: 1;
+            transform: translateX(0); /* Move to original position */
+        }
 </style>
 
 <body>
@@ -121,7 +131,7 @@ html{
         <!--? slider-area start -->
 		<div class="slider-area">
 			<div class="slider-full-active owl-carousel custom-dots">
-				<div class="slide-full slider-height d-flex align-items-center" style="background-image: url(assets/img/hero/globe.jpg);">
+				<div class="slide-full slider-height d-flex align-items-center" style="background-image: url(assets/img/hero/Screenshot_2024-06-15_135027-transformed.png);">
 					<div class="container">
 						<div class="row">
 							<div class="col-xl-6 col-lg-8 col-md-7 col-sm-8">
@@ -135,7 +145,7 @@ html{
 						</div>
 					</div>
 				</div>
-				<div class="slide-full d-flex slider-height align-items-center" style="background-image: url(assets/img/hero/h1_hero2.jpg);">
+				<div class="slide-full d-flex slider-height align-items-center" style="background-image: url(assets/img/hero/Screenshot_2024-06-15_140146-transformed.png);">
 					<div class="container">
 						<div class="row">
 							<div class="col-xl-6 col-lg-8 col-md-7 col-sm-8">
@@ -151,7 +161,7 @@ html{
 						</div>
 					</div>
 				</div>
-				<div class="slide-full d-flex slider-height align-items-center" style="background-image: url(assets/img/hero/oilrig.png);">
+				<div class="slide-full d-flex slider-height align-items-center" style="background-image: url(assets/img/hero/Screenshot_2024-06-15_140238.jpg);">
 					<div class="container">
 						<div class="row">
 							<div class="col-xl-6 col-lg-8 col-md-7 col-sm-8">
