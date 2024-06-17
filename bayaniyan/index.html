@@ -257,7 +257,7 @@
                                 <input type="text" id="name" name="name" class="form-control border-0 p-4" placeholder="Your Name" required="required" />
                             </div>
                             <div class="form-group">
-                                <input type="text" id="subject" name="subject" class="form-control border-0 p-4" placeholder="Your Need" required="required" />
+                                <input type="text" id="subject" name="message" class="form-control border-0 p-4" placeholder="Your Need" required="required" />
                             </div>
                             <div class="form-group">
                                 <input type="email" id="mail" name="email" class="form-control border-0 p-4" placeholder="Your Email" required="required" />
@@ -265,7 +265,7 @@
                             <div class="form-group">
                                 <select class="custom-select border-0 px-4" id="service" name="service" style="height: 47px;" required>
                                     <option value="" disabled selected>Select A Service</option>
-                                    <option value="air freight">Air Freight</option>
+                                    <option value="air freight"> Freight</option>
                                     <option value="land freight">Land Freight</option>
                                     <option value="sea freight">Sea Freight</option>
                                 </select>
@@ -526,10 +526,14 @@
                 <p>At Bayanihan Express Cargo, we specialize in personalized and efficient delivery solutions tailored exclusively for the Philippines. Whether you're sending a care package to family or shipping goods for your business, our team ensures every parcel arrives safely and on time.</p>
                 <div class="w-100">
                     <div class="input-group">
-                        <input type="text" class="form-control border-light" style="padding: 30px;" placeholder="Your query">
+                        <form action="query.php" method="post">
+                        <input type="text" class="form-control border-light" style="padding: 30px;" id="query" name="query" placeholder="Your query">
+                        <input type="mail" class="form-control border-light" style="padding: 30px;" id="emaile" name="emaile" placeholder="Your Mail Id">
+
                         <div class="input-group-append">
-                            <button class="btn btn-primary px-4">Mail Us</button>
+                            <button class="btn btn-primary px-4" type="submit">Mail Us</button>
                         </div>
+                    </form>
                     </div>
                 </div>
             </div>

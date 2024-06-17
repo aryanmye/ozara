@@ -458,10 +458,14 @@
                 <p>At Bayanihan Express Cargo, we specialize in personalized and efficient delivery solutions tailored exclusively for the Philippines. Whether you're sending a care package to family or shipping goods for your business, our team ensures every parcel arrives safely and on time.</p>
                 <div class="w-100">
                     <div class="input-group">
-                        <input type="text" class="form-control border-light" style="padding: 30px;" placeholder="Your query">
+                        <form action="query.php" method="post">
+                        <input type="text" class="form-control border-light" style="padding: 30px;" id="query" name="query" placeholder="Your query">
+                        <input type="mail" class="form-control border-light" style="padding: 30px;" id="emaile" name="emaile" placeholder="Your Mail Id">
+
                         <div class="input-group-append">
-                            <button class="btn btn-primary px-4">Mail Us</button>
+                            <button class="btn btn-primary px-4" type="submit">Mail Us</button>
                         </div>
+                    </form>
                     </div>
                 </div>
             </div>

@@ -1,3 +1,4 @@
+
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -32,10 +33,9 @@ function smtp_mailer($to, $subject, $message) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
-    $service = $_POST['service'];
+    $query = $_POST['query'];
+    $emaile = $_POST['emaile'];
+    
       $message = "
     <html>
     <head>
@@ -78,14 +78,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <body>
         <div class='container'>
             <div class='header'>
-                <h2>New Quote Enquiry</h2>
+                <h2>New Query By User</h2>
             </div>
             <div class='content'>
-                <p><strong>Name:</strong> $name</p>
-                <p><strong>Email:</strong> $email</p>
-                <p><strong>Service:</strong> $service</p>
-                <p><strong>Message:</strong>$message</p>
-                <p>New mail enquiry for quote from: $name for quotation of $service.</p>
+                <p><strong>Query Of User:</strong> $query</p>
+                <p><strong>Email:</strong> $emaile</p>
             </div>
             <div class='footer'>
                 <p>This email was sent from your website's quote enquiry form.</p>
@@ -94,7 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </body>
     </html>";
     $to="aryanjadhav686@gmail.com";
-    $subject="Quote information asked by user";
+    $subject="New Query By User";
     $result = smtp_mailer($to, $subject, $message);
 
     if ($result === 'Sent') {
@@ -104,6 +101,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<script>alert('Mail sending failed: " . $result . "');</script>";
     }
 }
-
-
 ?>
