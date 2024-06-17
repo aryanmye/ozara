@@ -32,11 +32,11 @@ function smtp_mailer($to, $subject, $message) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name=$_POST['name'];
+    $name = $_POST['name'];
     $mailid = $_POST['email'];
     $subject = $_POST['subject'];
-    $service=$_POST['service'];
-    $message = "New mail enquiry for quote from: " . $name . "for quotation of  " .$service ;
+    $service = $_POST['service'];
+    $message = "New mail enquiry for quote from: " . $name . " for quotation of " . $service;
     $to = 'aryanjadhav686@gmail.com';
     $result = smtp_mailer($to, $subject, $message);
 
