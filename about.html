@@ -26,6 +26,63 @@
 	<link rel="stylesheet" href="assets/css/nice-select.css">
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
+<style>
+    .h1-testimonial-active {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Adjust the gap between the sections as needed */
+}
+
+.single-testimonial {
+    flex: 1;
+    max-width: 30%; /* Adjust the width of each section */
+    background: #060505; /* Background color for each testimonial box */
+    border-radius: 10px; /* Rounded corners for a smooth look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Padding inside each testimonial box */
+    margin: 10px; /* Margin around each testimonial box */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonial-founder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px; /* Adjust the space between the founder section and the caption */
+}
+
+.founder-img img {
+    max-width: 80px; /* Adjust the size of the image */
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.founder-text span {
+    font-weight: bold;
+    display: block;
+    font-size: 1.2em;
+}
+
+.founder-text p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #777;
+}
+
+.testimonial-caption {
+    padding: 20px;
+    text-align: left;
+}
+
+.testimonial-top-cap {
+    font-size: 0.95em;
+    color: #fff9f9;
+    line-height: 1.6;
+    margin-top: 10px; /* Adjust the space above the testimonial text */
+}
+</style>
 <body>
     <header>
         <!--? Header Start -->
@@ -138,113 +195,61 @@
 
         <!-- About  End-->
         <!--? All startups Start -->
-        <div class="starups-area testimonial-area fix">
-            <!--left Contents  -->
-            <div class="starups-img">
-                <div class="play-btn"><a class="popup-video" href="https://youtu.be/Ws22z8AzONI?si=NUFra0rMV0PHnuT8"><i class="flaticon-null-3"></i></a></div>
-            </div>
-            <!-- Right Contents -->
-            <div class="starups">
-                <!--? Testimonial Start -->
-                <div class="h1-testimonial-active">
-                    <!-- Single Testimonial -->
-                    <div class="single-testimonial text-center">
-                        <div class="testimonial-caption ">
-                            <!-- founder -->
-                            <div class="testimonial-founder d-flex align-items-center justify-content-center mb-40">
-                                <div class="founder-img">
-                                    <img src="assets/img/gallery/testimonial.png" alt="">
-                                </div>
-                                <div class="founder-text">
-                                    <span>Mr Manzoor Nelliyattile</span>
-                                    <p>CEO & Founder</p>
-                                </div>
-                            </div>
-                            <!-- Caption -->
-                            <div class="testimonial-top-cap">
-                                <p>As CEO of Ozara Petroleum, I foresee a dynamic future for Dubai's petroleum industry, marked by sustainability and innovation. Dubai's strategic investments in renewable energy and infrastructure projects will drive growth and resilience, positioning the city as a global leader in the energy transition. Globally, the petroleum landscape will evolve rapidly, with the industry embracing renewable energy and digitalization to meet the challenges of climate change and geopolitical shifts. At Ozara Petroleum, we are committed to leading this transformation, leveraging our expertise and resources to shape a future where energy is sustainable and equitable for all.</p>
-                            </div>
+     
 
+
+        <section class="service-area pt-150 pb-150" style="margin-top:200px;" id="investment">
+            <div class="service-bg"></div>
+            <div class="container">
+                <!-- Section Tittle -->
+                <div class="row d-flex justify-content-center">
+                    <div class="col-xl-7 col-lg-8 col-md-11 col-sm-11">
+                        <div class="section-tittle section-tittle3  text-center mb-90">
+                            <span>Our Dedicated Team</span>
+                            <h2>Empowering Success Through Expertise</h2>
                         </div>
                     </div>
                 </div>
-                <!-- Testimonial End -->
-            </div>
-        </div>
+                <!-- Section caption -->
+                <div class="row justify-content-center">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-9">
+                        <div class="services-caption text-center mb-30">
+                            <div class="service-icon">
+                                <i><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACQUlEQVR4nO2ZPWsVQRSGnyQkYGKjjVct0mghmkL/gKJ2V8GIptAfYETt/MBCGy0k+QH6A0wKsdJSEmJjp0WSQjEB7bRRzA1Go3DlwLswLLl7x+TKnrnuAwPLnHeW9+zM2Y9ZqPh/OAXMAKtAQ8d1EuM+0GzR7pHQTDSBH8B1YLfaDfU1U5mZWZm1JPLcVMyWmXsaMlvbIFZTbIUEWJFZW0559ir2jQSYkVmriTy3Ulpa9aDYrSb2qFkSP1MqdnSLTf72m1HXEmqk/EDsCgaAMWAaeKtXlFUdTylmGtecBZYL6iNrS8AoDukFJgKj88AV4FDQZ8dXFcv6HmisGyZkbA24DPQUaHuV5FqQjJvl1JSx4xvEs6uf50SQzBlKZiCoifEWmlaJoJmx2HugnxIZC2qiZxOJ2DJbVPwcJTItE1bEbCIR45rijymRdzJxYAuJHFTcnjOlf3sMbSGR7YrbuUqjnclOav4pVSI5qhnpFJ26kknMSAxVIp2i62bkdosNuXbUNLb0RJYDE+vAU2AkYtyItOvBeDtXadjb60ngSWDqTsS4u9L+Bl4A54E+nJDtIk5GaCeltTHuGJe5hxHaR9JewiEXZc62fGK/Yy7gkNMy9yxC+1xa+ynkjmMyNxehfSntURxyROZeR2jfSHsYh+wPdkTasSTtPhxSk7lPEdrP0u7CIYMy9z1Cm23MbcMpv2SwaLOtXxrTuuWrTO4o0OyU5guO+SiTwwWaYWk+4JjFiH8jWVvAMa/+IhHTVnQtfwDXPfwfKZTEwgAAAABJRU5ErkJggg=="></i>
+                            </div> 
+                            <div class="service-cap">
+                                <h4><a>Mr.Manzoor Nelliyattile</a></h4>
+                                <p>As CEO of Ozara Petroleum, I foresee a dynamic future for Dubai's petroleum industry, marked by sustainability and innovation. Dubai's strategic investments in renewable energy and infrastructure projects will drive growth and resilience, positioning the city as a global leader in the energy transition.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-9">
+                        <div class="services-caption active text-center mb-30">
+                            <div class="service-icon">
+                                <i><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACQUlEQVR4nO2ZPWsVQRSGnyQkYGKjjVct0mghmkL/gKJ2V8GIptAfYETt/MBCGy0k+QH6A0wKsdJSEmJjp0WSQjEB7bRRzA1Go3DlwLswLLl7x+TKnrnuAwPLnHeW9+zM2Y9ZqPh/OAXMAKtAQ8d1EuM+0GzR7pHQTDSBH8B1YLfaDfU1U5mZWZm1JPLcVMyWmXsaMlvbIFZTbIUEWJFZW0559ir2jQSYkVmriTy3Ulpa9aDYrSb2qFkSP1MqdnSLTf72m1HXEmqk/EDsCgaAMWAaeKtXlFUdTylmGtecBZYL6iNrS8AoDukFJgKj88AV4FDQZ8dXFcv6HmisGyZkbA24DPQUaHuV5FqQjJvl1JSx4xvEs6uf50SQzBlKZiCoifEWmlaJoJmx2HugnxIZC2qiZxOJ2DJbVPwcJTItE1bEbCIR45rijymRdzJxYAuJHFTcnjOlf3sMbSGR7YrbuUqjnclOav4pVSI5qhnpFJ26kknMSAxVIp2i62bkdosNuXbUNLb0RJYDE+vAU2AkYtyItOvBeDtXadjb60ngSWDqTsS4u9L+Bl4A54E+nJDtIk5GaCeltTHuGJe5hxHaR9JewiEXZc62fGK/Yy7gkNMy9yxC+1xa+ynkjmMyNxehfSntURxyROZeR2jfSHsYh+wPdkTasSTtPhxSk7lPEdrP0u7CIYMy9z1Cm23MbcMpv2SwaLOtXxrTuuWrTO4o0OyU5guO+SiTwwWaYWk+4JjFiH8jWVvAMa/+IhHTVnQtfwDXPfwfKZTEwgAAAABJRU5ErkJggg=="></i>
 
-        <div class="starups-area testimonial-area fix" style="margin-bottom: 80px; margin-top: 80px;">
-            <!--left Contents  -->
-            
-            <!-- Right Contents -->
-            <div class="starups">
-                <!--? Testimonial Start -->
-                <div class="h1-testimonial-active">
-                    <!-- Single Testimonial -->
-                    <div class="single-testimonial text-center">
-                        <div class="testimonial-caption ">
-                            <!-- founder -->
-                            <div class="testimonial-founder d-flex align-items-center justify-content-center mb-40">
-                               
-                                <div class="founder-text">
-                                    <span>Mr. Hassan Naseem</span>
-                                    <p>CFO</p>
-                                </div>
+                            </div> 
+                            <div class="service-cap">
+                                <h4><a>Mr Hassan</a></h4>
+                                <p>As CFO of Ozara Petroleum, I am committed to ensuring financial stability and fostering growth. Our strategic investments in renewable energy and technological innovation are essential to our future success, helping us to navigate the evolving global energy landscape.</p>
                             </div>
-                            <!-- Caption -->
-                            <div class="testimonial-top-cap">
-                                <p> With over 25 years of top-level management experience in financial markets and services, Mr. Hassan is a highly accomplished, ethical and dynamic CFO leading a team of highly qualified and experienced finance and investment professionals.  He holds expertise in financial operations.  He has played a key role in shaping and executing growth strategies, setting up multiple businesses at different geographical regions, handling complex challenges and delivering a high standard of corporate governance.</p>
+                        </div>
+                    </div> 
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-9">
+                        <div class="services-caption text-center mb-30">
+                            <div class="service-icon">
+                                <i ><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACQUlEQVR4nO2ZPWsVQRSGnyQkYGKjjVct0mghmkL/gKJ2V8GIptAfYETt/MBCGy0k+QH6A0wKsdJSEmJjp0WSQjEB7bRRzA1Go3DlwLswLLl7x+TKnrnuAwPLnHeW9+zM2Y9ZqPh/OAXMAKtAQ8d1EuM+0GzR7pHQTDSBH8B1YLfaDfU1U5mZWZm1JPLcVMyWmXsaMlvbIFZTbIUEWJFZW0559ir2jQSYkVmriTy3Ulpa9aDYrSb2qFkSP1MqdnSLTf72m1HXEmqk/EDsCgaAMWAaeKtXlFUdTylmGtecBZYL6iNrS8AoDukFJgKj88AV4FDQZ8dXFcv6HmisGyZkbA24DPQUaHuV5FqQjJvl1JSx4xvEs6uf50SQzBlKZiCoifEWmlaJoJmx2HugnxIZC2qiZxOJ2DJbVPwcJTItE1bEbCIR45rijymRdzJxYAuJHFTcnjOlf3sMbSGR7YrbuUqjnclOav4pVSI5qhnpFJ26kknMSAxVIp2i62bkdosNuXbUNLb0RJYDE+vAU2AkYtyItOvBeDtXadjb60ngSWDqTsS4u9L+Bl4A54E+nJDtIk5GaCeltTHuGJe5hxHaR9JewiEXZc62fGK/Yy7gkNMy9yxC+1xa+ynkjmMyNxehfSntURxyROZeR2jfSHsYh+wPdkTasSTtPhxSk7lPEdrP0u7CIYMy9z1Cm23MbcMpv2SwaLOtXxrTuuWrTO4o0OyU5guO+SiTwwWaYWk+4JjFiH8jWVvAMa/+IhHTVnQtfwDXPfwfKZTEwgAAAABJRU5ErkJggg=="></i>
+                            </div> 
+                            <div class="service-cap">
+                                <h4><a>Mr Prasad</a></h4>
+                                <p>As Managing Director of Ozara Petroleum, my focus is on driving operational excellence and achieving our strategic goals. Our commitment to innovation and sustainability positions us well to lead the industry into a new era of energy solutions.</p>
                             </div>
-                            <div class="founder-img">
-                                <img src="assets/img/gallery/testimonial.png" alt="">
-                            </div>
-
                         </div>
                     </div>
                 </div>
-                <!-- Testimonial End -->
             </div>
-            <div class="starups-img" >
-                <div class="play-btn"><a class="popup-video" href="https://youtu.be/THSSd_4NWq0?si=P5ELhbKwOiG3x3v7"><i class="flaticon-null-3"></i></a></div>
-            </div>
-        </div>
-
-        <div class="starups-area testimonial-area fix" style="margin-bottom: 80px; margin-top: 80px;">
-            <!--left Contents  -->
-            <div class="starups-img" >
-                <div class="play-btn"><a class="popup-video" href="https://youtu.be/THSSd_4NWq0?si=P5ELhbKwOiG3x3v7"><i class="flaticon-null-3"></i></a></div>
-            </div>
-            <!-- Right Contents -->
-            <div class="starups">
-                <!--? Testimonial Start -->
-                <div class="h1-testimonial-active">
-                    <!-- Single Testimonial -->
-                    <div class="single-testimonial text-center">
-                        <div class="testimonial-caption ">
-                            <!-- founder -->
-                            <div class="testimonial-founder d-flex align-items-center justify-content-center mb-40">
-                               
-                                <div class="founder-text">
-                                    <span>Mr. Prasad VC</span>
-                                    <p>Managing Director</p>
-                                </div>
-                            </div>
-                            <!-- Caption -->
-                            <div class="testimonial-top-cap">
-                                <p> Prasad VC is the dynamic Managing Director of the Ozara Group, a diversified conglomerate with interests spanning across multiple sectors including petroleum, logistics, investments, and general trading. Under his visionary leadership, the Ozara Group has achieved significant milestones and continues to expand its footprint globally.
-
-                                    With a robust portfolio of companies such as Ozara Petroleum, Bayanihan Express Cargo, and various investment and trading ventures, Prasad VC has demonstrated exceptional business acumen and strategic foresight. His commitment to innovation, excellence, and sustainable growth has been instrumental in driving the Group's success.</p>
-                            </div>
-                            <div class="founder-img">
-                                <img src="assets/img/gallery/testimonial.png" alt="">
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <!-- Testimonial End -->
-            </div>
-           
-        </div>
+        </section>
+        
     </main>
     <footer>
         <!-- Footer Start-->
