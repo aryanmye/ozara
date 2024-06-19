@@ -2365,34 +2365,34 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #FF4800;
-  border-color: #FF4800;
+  background-color: #DE202E;
+  border-color: #DE202E;
 }
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #d93d00;
-  border-color: #cc3a00;
+  background-color: #DE202E;
+  border-color: #DE202E;
 }
 
 .btn-primary:focus, .btn-primary.focus {
   color: #fff;
-  background-color: #d93d00;
-  border-color: #cc3a00;
+  background-color: #DE202E;
+  border-color: #DE202E;
   box-shadow: 0 0 0 0.2rem rgba(255, 99, 38, 0.5);
 }
 
 .btn-primary.disabled, .btn-primary:disabled {
   color: #fff;
-  background-color: #FF4800;
-  border-color: #FF4800;
+  background-color: #DE202E;
+  border-color: #DE202E;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
 .show > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #cc3a00;
-  border-color: #bf3600;
+  background-color: #DE202E;
+  border-color: #DE202E;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
@@ -9532,7 +9532,7 @@ p,
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
   color: #FFFFFF;
-  background: #FF4800;
+  background: #DE202E;
 }
 
 @media (max-width: 991.98px) {
@@ -9570,7 +9570,7 @@ p,
   display: block;
   width: 60px;
   height: 60px;
-  background: #FF4800;
+  background: #DE202E;
   border-radius: 50%;
   animation: pulse-border 1500ms ease-out infinite;
 }
