@@ -376,6 +376,11 @@ h1, .h1 {
     font-size: calc(1.375rem + 1.5vw) ;
   }
 }
+@media (max-width: 768px) {
+  h1, .h1 {
+    font-size: 23px ;
+  }
+}
 
 h2, .h2 {
   font-size: 2rem;
