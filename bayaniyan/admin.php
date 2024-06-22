@@ -102,7 +102,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
             <body>
                 <div class='container'>
                     <div class='header'>
-                        <h2>New Quote Enquiry</h2>
+                        <h2>Sender ID</h2>
                     </div>
                     <div class='content'>
                         <p><strong>Name:</strong> $sname</p>
@@ -192,7 +192,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
             <body>
                 <div class='container'>
                     <div class='header'>
-                        <h2>New Quote Enquiry</h2>
+                        <h2>Receiver ID</h2>
                     </div>
                     <div class='content'>
                         <p><strong>Name:</strong> $sname</p>
