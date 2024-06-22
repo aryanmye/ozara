@@ -156,6 +156,7 @@
                         </div>
                     </div>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    
                     <a href="https:/wa.me/971553454629"  target="_blank" class="whatsapp_float"><i class="fa-brands fa-whatsapp whatsapp-icon"></i></a>
 
                 </div>
@@ -172,11 +173,26 @@
             <h1 class="text-primary mb-4">Safe & Faster</h1>
             <h1 class="text-white display-3 mb-5">Cargo Services For Phillipines</h1>
             <div class="mx-auto" style="width: 100%; max-width: 600px;">
-                <div class="input-group">
-                    <input type="text" class="form-control border-light" style="padding: 30px;" placeholder="Tracking Id">
-                    <div class="input-group-append">
-                        <button class="btn btn-primary px-3">Track & Trace</button>
+                <div class="card-body">
+                    <form action="tracking_sender_record.php" method="post">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control border-light" id="trackingid" name="trackingid" style="padding: 20px;" placeholder="Enter Sender Tracking ID">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary px-4" type="submit">Track & Trace</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="text-center pb-2">
+                        <h6 class="text-primary text-uppercase font-weight-bold">OR</h6>
                     </div>
+                    <form action="tracking_receiver_record.php" method="post">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control border-light" id="rtrackingid" name="rtrackingid" style="padding: 20px;" placeholder="Enter Receiver Tracking ID">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary px-4" type="submit">Track & Trace</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
