@@ -38,12 +38,16 @@ function smtp_mailer($to, $subject, $message) {
 
 
 <?php
-
+session_start();
 include 'connect.php';
 function generateTrackingId() {
     return uniqid('sender_', true);
 }
-
+// Check if user is logged in and if the username matches "ozaraadmin"
+if (!isset($_SESSION['user_data']) || $_SESSION['user_data']['username'] !== 'ozaraadmin') {
+    header("Location: login.html"); // Redirect to login page
+    exit(); // Ensure that no further code is executed
+}
 // Initialize the tracking ID
 $trackingId = generateTrackingId();
 if($_SERVER["REQUEST_METHOD"]=="POST")
@@ -228,6 +232,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sender and Receiver Forms</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -316,6 +321,19 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
     </style>
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <a class="navbar-brand" href="#">BAYANIHAN TRACKING ADMIN</a>
+
+    <form class="form-inline my-2 my-lg-0" action="logoutadmin.php" method="post">
+      
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Log Out</button>
+    </form>
+  </div>
+</nav>
     <h1>Add Tracking Record</h1>
     <div class="container">
         <div class="form-container">
