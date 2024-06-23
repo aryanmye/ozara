@@ -78,10 +78,10 @@ function getInitials($name) {
 								</div>
 								<nav class="hamburger-menu">
 									<ul id="navigation">
-										<li><a href="index.php">Home</a></li>
+										<li><a href="index.html">Home</a></li>
 										<li><a href="about.php">About</a></li>
-										<li><a href="services.html">Services</a></li>
-                                        <!-- <li><a href="Logis (1)/Logis/index.html">Bayaniyan Shipping</a></li> -->
+										<li><a href="index.html#services">Services</a></li>
+                                        
 										<li><a href="contact.php">contact</a></li>
                                         <li>
                                     

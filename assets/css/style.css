@@ -3373,8 +3373,7 @@ nav.nav-menu-show {
 
 .experience-area .caption-overlay {
     position: absolute;
-    content: "";
-    background-color: rgba(4, 21, 28, 0.902);
+    content: "";  
     width: 55%;
     height: 60%;
     left: 0;
