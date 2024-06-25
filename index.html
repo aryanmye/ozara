@@ -9,6 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <script defer src="app.js"></script>
+
+   
 
 	<!-- CSS here -->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -69,10 +72,24 @@ html{
     line-height: 1.6;
     margin-top: 10px; /* Adjust the space above the testimonial text */
 }
+.section_para{
+transform: translateX(20px);
+opacity: 0;
+transition: 1s ease;
+}
+.section_para--visible   {
+    transform: translateY(0);
+    opacity: 1;
+}
+
 </style>
 
 <body>
-   
+    <!-- animation -->
+     <script>
+    
+     </script>
+     <!-- animation  -->
    
 <header>
     <!--? Header Start -->
@@ -165,11 +182,11 @@ html{
 						</div>
 					</div>
 				</div>
-				<div class="slide-full d-flex slider-height align-items-center" style="background-image: url(assets/img/hero/2151541839.jpg);">
+				<div class="slide-full d-flex slider-height align-items-center"style="background-image: url(assets/img/hero/2151541839.jpg);">
 					<div class="container">
-						<div class="row">
+						<div class="row">  
 							<div class="col-xl-6 col-lg-8 col-md-7 col-sm-8">
-								<div class="slide-full-content">
+								<div class="slide-full-content" >
                                     <span>Your Global  Partner</span>
 									<h1>Your Reliable<br> 
                                         Shipping Partner
@@ -180,6 +197,7 @@ html{
 							</div>
 						</div>
 					</div>
+
 				</div>
 				<div class="slide-full d-flex slider-height align-items-center" style="background-image: url(assets/img/hero/5409.jpg);">
 					<div class="container">
@@ -216,7 +234,7 @@ html{
         
 		<!-- slider-area end -->
         <!--? About Start-->
-        <section class="about-area section-padding2" id="services">
+        <section class="about-area section-padding2 hidden" id="services">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-10">
@@ -224,9 +242,9 @@ html{
                             <!-- Section Tittle -->
                             <div class="section-tittle section-tittle2 mb-35">
                                 <span>Ozara Shipping LLC</span>
-                                <h2>12 years Of Experience in Shipping & Logistics sector</h2>
+                                <h2 class="slide-full-content">12 years Of Experience in Shipping & Logistics sector</h2>
                             </div>
-                            <p> Ozara Shipping LLC is Dubai based shipping , freight forwarding , logistic provider and transportation company. Ozara shipping having head office is located in Dubai , the hub of world's business. We also holding branches and agents all over the world.</p>
+                            <p class=""> Ozara Shipping LLC is Dubai based shipping , freight forwarding , logistic provider and transportation company. Ozara shipping having head office is located in Dubai , the hub of world's business. We also holding branches and agents all over the world.</p>
                             <a href="about.html" class="btn">About us</a>
                         </div>
                     </div>
@@ -369,7 +387,7 @@ html{
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
                         <div class="single-team mb-30">
                             <div class="team-img">
-                                <img src="assets/img/gallery/packaging.png" alt="">
+                                <img src="assets/img/gallery/packaging1.png" alt="">
                             </div>
                             <div class="team-caption">
                                 <h3><a >Packaging/Lashing</a></h3>
@@ -1029,7 +1047,7 @@ html{
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
                         <div class="single-team mb-30">
                             <div class="team-img">
-                                <img src="assets/img/gallery/corporate.png" alt="" height="480px">
+                                <img src="assets/img/gallery/corporate.jpg" alt="" height="480px">
                             </div>
                             <div class="team-caption">
                                 <h3><a >Corporate Logistics</a></h3>
