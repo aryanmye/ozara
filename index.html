@@ -82,6 +82,118 @@ transition: 1s ease;
     opacity: 1;
 }
 
+
+/* Define keyframes for fade-in animation */
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Apply animations to specific elements inside .about-caption */
+.about-caption h1,
+.about-caption h2,
+.about-caption p,
+.about-caption a {
+    opacity: 0; /* Initial state */
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.about-caption span {
+    animation-delay: 0.2s;
+}
+
+.about-caption h1 {
+    animation-delay: 0.3s;
+}
+
+.about-caption p {
+    animation-delay: 0.4s;
+}
+
+.about-caption a {
+    animation-delay: 0.6s;
+}
+
+/* Apply active class to trigger fadeInLeft animation */
+.active .about-caption h1,
+.active .about-caption h2,
+.active .about-caption p,
+.active .about-caption a {
+    animation-name: fadeInLeft;
+}
+
+.about-img img {
+    opacity: 3; /* Initial state */
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.about-img img{
+    animation-delay: 0.2s;
+}
+
+
+/* Apply active class to trigger fadeInLeft animation */
+.active .about-img img {
+    animation-name: fadeInLeft;
+}
+
+
+
+.section-title h1,
+.section-title h2,
+.section-title p,
+.section-title a {
+    opacity: 0; /* Initial state */
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.section-title span {
+    animation-delay: 0.2s;
+}
+
+.section-title h1 {
+    animation-delay: 0.3s;
+}
+
+.section-title p {
+    animation-delay: 0.4s;
+}
+
+.section-title a {
+    animation-delay: 0.6s;
+}
+
+/* Apply active class to trigger fadeInLeft animation */
+.active .section-title h1,
+.active .section-title h2,
+.active .section-title p,
+.active .section-title a {
+    animation-name: fadeInLeft;
+}
+
+.team-img img {
+    opacity: 0; /* Initial state */
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.team-img img {
+    animation-delay: 0.2s;
+}
+.active .team-img img {
+    animation-name: fadeInDown;
+}
+
+
 </style>
 
 <body>
@@ -234,11 +346,11 @@ transition: 1s ease;
         
 		<!-- slider-area end -->
         <!--? About Start-->
-        <section class="about-area section-padding2 hidden" id="services">
+        <section class="about-area section-padding2 active hidden" id="services">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-10">
-                        <div class="about-caption mb-50">
+                        <div class="about-caption  mb-50">
                             <!-- Section Tittle -->
                             <div class="section-tittle section-tittle2 mb-35">
                                 <span>Ozara Shipping LLC</span>
@@ -250,7 +362,7 @@ transition: 1s ease;
                     </div>
                     <div class="col-lg-6 col-md-12">
                         <!-- about-img -->
-                        <div class="about-img ">
+                        <div class="about-img active">
                             <div class="about-font-img ">
                                 <img src="assets/img/gallery/cargoss.jpg" alt=""class="responsive-img">
                             </div>
@@ -262,6 +374,40 @@ transition: 1s ease;
                 </div>
             </div>
         </section>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                // Function to check if an element is in viewport
+                function isInViewport(element) {
+                    var rect = element.getBoundingClientRect();
+                    var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+                    return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+                }
+        
+                // Function to handle animations on scroll
+                function handleAnimations() {
+                    $('.about-area').each(function() {
+                        if (isInViewport(this)) {
+                            $(this).addClass('active');
+                        } else {
+                            $(this).removeClass('active');
+                        }
+                    });
+                }
+        
+                // Initial check on page load
+                handleAnimations();
+        
+                // Check on scroll
+                $(window).scroll(function() {
+                    handleAnimations();
+                });
+            });
+        </script>
+        
+
+
         
        
         <!--? Services Area Start -->
@@ -271,7 +417,7 @@ transition: 1s ease;
                 <!-- Section Tittle -->
                 <div class="row d-flex justify-content-center">
                     <div class="col-xl-7 col-lg-8 col-md-11 col-sm-11">
-                        <div class="section-tittle section-tittle3  text-center mb-90">
+                        <div class="section-tittle active section-tittle3  text-center mb-90">
                             <span>Our Services At Ozara Shipping</span>
                             <h2>We provide best wide range of features for you</h2>
                         </div>
@@ -316,6 +462,35 @@ transition: 1s ease;
                 </div>
             </div>
         </section>
+        <script>
+            $(document).ready(function() {
+                // Function to check if an element is in viewport
+                function isInViewport(element) {
+                    var rect = element.getBoundingClientRect();
+                    var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+                    return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+                }
+        
+                // Function to handle animations on scroll
+                function handleAnimations() {
+                    $('.service-area').each(function() {
+                        if (isInViewport(this)) {
+                            $(this).addClass('active');
+                        } else {
+                            $(this).removeClass('active');
+                        }
+                    });
+                }
+        
+                // Initial check on page load
+                handleAnimations();
+        
+                // Check on scroll
+                $(window).scroll(function() {
+                    handleAnimations();
+                });
+            });
+        </script>
         <section class="team-area section-padding30">
             <div class="container">
                 <div class="row justify-content-center">
@@ -327,6 +502,37 @@ transition: 1s ease;
                         </div> 
                     </div>
                 </div>
+
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <script>
+                    $(document).ready(function() {
+                        // Function to check if an element is in viewport
+                        function isInViewport(element) {
+                            var rect = element.getBoundingClientRect();
+                            var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+                            return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+                        }
+                
+                        // Function to handle animations on scroll
+                        function handleAnimations() {
+                            $('.team-area').each(function() {
+                                if (isInViewport(this)) {
+                                    $(this).addClass('active');
+                                } else {
+                                    $(this).removeClass('active');
+                                }
+                            });
+                        }
+                
+                        // Initial check on page load
+                        handleAnimations();
+                
+                        // Check on scroll
+                        $(window).scroll(function() {
+                            handleAnimations();
+                        });
+                    });
+                </script>
                 <div class="row">
                     <!-- single Tem -->
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
@@ -342,7 +548,7 @@ transition: 1s ease;
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
                         <div class="single-team mb-30">
-                            <div class="team-img">
+                            <div class="team-img active">
                                 <img src="assets/img/gallery/roadtransport.png" alt="">
                             </div>
                             <div class="team-caption">
@@ -353,7 +559,7 @@ transition: 1s ease;
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
                         <div class="single-team mb-30">
-                            <div class="team-img">
+                            <div class="team-img active">
                                 <img src="assets/img/gallery/nvocc.jpg" alt="">
                             </div>
                             <div class="team-caption">
@@ -364,7 +570,7 @@ transition: 1s ease;
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
                         <div class="single-team mb-30">
-                            <div class="team-img">
+                            <div class="team-img active">
                                 <img src="assets/img/gallery/log&dis.png" alt="">
                             </div>
                             <div class="team-caption">
@@ -375,7 +581,7 @@ transition: 1s ease;
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
                         <div class="single-team mb-30">
-                            <div class="team-img">
+                            <div class="team-img active">
                                 <img src="assets/img/gallery/sea_frieght (2).jpg" alt="">
                             </div>
                             <div class="team-caption">
@@ -386,7 +592,7 @@ transition: 1s ease;
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
                         <div class="single-team mb-30">
-                            <div class="team-img">
+                            <div class="team-img active">
                                 <img src="assets/img/gallery/packaging1.png" alt="">
                             </div>
                             <div class="team-caption">
@@ -403,7 +609,7 @@ transition: 1s ease;
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-12">
                         <!-- about-img -->
-                        <div class="about-img ">
+                        <div class="about-img active">
                             <div class="about-font-img ">
                                 <img src="assets/img/gallery/petroleum.png" alt=""  class="responsive-img">
                             </div>
@@ -500,7 +706,7 @@ transition: 1s ease;
                     <!-- single Tem -->
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
                         <div class="single-team mb-30">
-                            <div class="team-img">
+                            <div class="team-img active">
                                 <img src="assets/img/gallery/petrolgun.png" alt="">
                             </div>
                             <div class="team-caption">
@@ -511,7 +717,7 @@ transition: 1s ease;
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
                         <div class="single-team mb-30">
-                            <div class="team-img">
+                            <div class="team-img active">
                                 <img src="assets/img/gallery/oiltanker (2).jpg" alt="">
                             </div>
                             <div class="team-caption">
@@ -522,7 +728,7 @@ transition: 1s ease;
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
                         <div class="single-team mb-30">
-                            <div class="team-img">
+                            <div class="team-img active">
                                 <img src="assets/img/gallery/lpgstation.png" alt="">
                             </div>
                             <div class="team-caption">
@@ -533,7 +739,7 @@ transition: 1s ease;
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
                         <div class="single-team mb-30">
-                            <div class="team-img">
+                            <div class="team-img active">
                                 <img src="assets/img/gallery/oilrig.png" alt="" height="500px">
                             </div>
                             <div class="team-caption">
@@ -544,7 +750,7 @@ transition: 1s ease;
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
                         <div class="single-team mb-30">
-                            <div class="team-img">
+                            <div class="team-img active">
                                 <img src="assets/img/gallery/oilbarrel.png" alt="" >
                             </div>
                             <div class="team-caption">
@@ -555,7 +761,7 @@ transition: 1s ease;
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
                         <div class="single-team mb-30">
-                            <div class="team-img">
+                            <div class="team-img active">
                                 <img src="assets/img/gallery/jet.png" alt="">
                             </div>
                             <div class="team-caption">
@@ -566,7 +772,7 @@ transition: 1s ease;
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
                         <div class="single-team mb-30">
-                            <div class="team-img">
+                            <div class="team-img active">
                                 <img src="assets/img/gallery/urea.png" alt="">
                             </div>
                             <div class="team-caption">
@@ -577,7 +783,7 @@ transition: 1s ease;
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
                         <div class="single-team mb-30">
-                            <div class="team-img">
+                            <div class="team-img active">
                                 <img src="assets/img/gallery/bitumen.png" alt="" height="500px">
                             </div>
                             <div class="team-caption">
@@ -588,7 +794,7 @@ transition: 1s ease;
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
                         <div class="single-team mb-30">
-                            <div class="team-img">
+                            <div class="team-img active">
                                 <img src="assets/img/gallery/lng.png" alt="">
                             </div>
                             <div class="team-caption">
@@ -690,7 +896,7 @@ transition: 1s ease;
                     </div>
                     <div class="col-lg-6 col-md-12">
                         <!-- about-img -->
-                        <div class="about-img ">
+                        <div class="about-img active">
                             <div class="about-font-img ">
                                 <img src="assets/img/gallery/investment.png" alt="" class="responsive-img" >
                             </div>
@@ -765,7 +971,7 @@ transition: 1s ease;
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-12">
                         <!-- about-img -->
-                        <div class="about-img ">
+                        <div class="about-img active">
                             <div class="about-font-img " id="trading">
                                 <img src="assets/img/gallery/trading.png" alt=""  class="responsive-img">
                             </div>
@@ -858,7 +1064,7 @@ transition: 1s ease;
                     <!-- single Tem -->
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
                         <div class="single-team mb-30">
-                            <div class="team-img">
+                            <div class="team-img active">
                                 <img src="assets/img/gallery/rice.png" alt="" height="480px">
                             </div>
                             <div class="team-caption">
@@ -869,7 +1075,7 @@ transition: 1s ease;
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
                         <div class="single-team mb-30">
-                            <div class="team-img">
+                            <div class="team-img active">
                                 <img src="assets/img/gallery/coffee.png" alt="">
                             </div>
                             <div class="team-caption">
@@ -880,7 +1086,7 @@ transition: 1s ease;
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
                         <div class="single-team mb-30">
-                            <div class="team-img">
+                            <div class="team-img active">
                                 <img src="assets/img/gallery/perfume.png" alt="" height="480px">
                             </div>
                             <div class="team-caption">
@@ -891,7 +1097,7 @@ transition: 1s ease;
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
                         <div class="single-team mb-30">
-                            <div class="team-img">
+                            <div class="team-img active">
                                 <img src="assets/img/gallery/sugar.png" alt="">
                             </div>
                             <div class="team-caption">
@@ -902,7 +1108,7 @@ transition: 1s ease;
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
                         <div class="single-team mb-30">
-                            <div class="team-img">
+                            <div class="team-img active">
                                 <img src="assets/img/gallery/spices2.jpg" alt="" height="520px">
                             </div>
                             <div class="team-caption">
@@ -913,7 +1119,7 @@ transition: 1s ease;
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
                         <div class="single-team mb-30">
-                            <div class="team-img">
+                            <div class="team-img active">
                                 <img src="assets/img/gallery/2148549909.jpg" alt="" height="520px">
                             </div>
                             <div class="team-caption">
@@ -943,7 +1149,7 @@ transition: 1s ease;
                     </div>
                     <div class="col-lg-6 col-md-12">
                         <!-- about-img -->
-                        <div class="about-img ">
+                        <div class="about-img active">
                             <div class="about-font-img ">
                                 <img src="assets/img/gallery/logistics.jpg" alt="" class="responsive-img" >
                             </div>
@@ -1024,7 +1230,7 @@ transition: 1s ease;
                     <!-- single Tem -->
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
                         <div class="single-team mb-30">
-                            <div class="team-img">
+                            <div class="team-img active">
                                 <img src="assets/img/gallery/freight.png" alt="" height="480px">
                             </div>
                             <div class="team-caption">
@@ -1035,7 +1241,7 @@ transition: 1s ease;
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
                         <div class="single-team mb-30">
-                            <div class="team-img">
+                            <div class="team-img active">
                                 <img src="assets/img/gallery/warehousing.jpg" alt="" height="480px">
                             </div>
                             <div class="team-caption">
@@ -1046,7 +1252,7 @@ transition: 1s ease;
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
                         <div class="single-team mb-30">
-                            <div class="team-img">
+                            <div class="team-img active">
                                 <img src="assets/img/gallery/corporate.jpg" alt="" height="480px">
                             </div>
                             <div class="team-caption">
@@ -1057,7 +1263,7 @@ transition: 1s ease;
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
                         <div class="single-team mb-30">
-                            <div class="team-img">
+                            <div class="team-img active">
                                 <img src="assets/img/gallery/retail.png" alt="" height="480px">
                             </div>
                             <div class="team-caption">
@@ -1068,7 +1274,7 @@ transition: 1s ease;
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
                         <div class="single-team mb-30">
-                            <div class="team-img">
+                            <div class="team-img active">
                                 <img src="assets/img/gallery/ecommerce.png" alt="" height="490px">
                             </div>
                             <div class="team-caption">
@@ -1079,7 +1285,7 @@ transition: 1s ease;
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
                         <div class="single-team mb-30">
-                            <div class="team-img">
+                            <div class="team-img active">
                                 <img src="assets/img/gallery/automotive.png" alt="" height="500px">
                             </div>
                             <div class="team-caption">
@@ -1109,7 +1315,7 @@ transition: 1s ease;
                     <!-- single Tem -->
                      <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
                         <div class="single-team mb-30">
-                            <div class="team-img">
+                            <div class="team-img active">
                                 <img src="assets/img/gallery/team3.png" alt="">
                             </div>
                             <div class="team-caption">
@@ -1120,7 +1326,7 @@ transition: 1s ease;
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
                         <div class="single-team mb-30">
-                            <div class="team-img">
+                            <div class="team-img active">
                                 <img src="assets/img/gallery/team2.png" alt="">
                             </div>
                             <div class="team-caption">
@@ -1132,7 +1338,7 @@ transition: 1s ease;
                     
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
                         <div class="single-team mb-30">
-                            <div class="team-img">
+                            <div class="team-img active">
                                 <img src="assets/img/gallery/team1.png" alt="">
                             </div>
                             <div class="team-caption">
