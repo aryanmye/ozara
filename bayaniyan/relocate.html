@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Contact Us</title>
+    <title>Relocation</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -115,7 +115,6 @@
                             <a href="landfreight.html" class="dropdown-item">Land Freights</a>
                             <a href="seafreight.html" class="dropdown-item">Sea Freights</a>
                             <a href="airfreight.html" class="dropdown-item">Air Freights</a>
-                            <a href="relocate.html" class="dropdown-item">Relocation</a>
                         </div>
                     </div>
                     <div class="nav-item dropdown">
@@ -139,11 +138,11 @@
     <!-- Header Start -->
     <div class="jumbotron jumbotron-fluid mb-5">
         <div class="container text-center py-5">
-            <h1 class="text-white display-3">Contact</h1>
+            <h1 class="text-white display-3">Relocate</h1>
             <div class="d-inline-flex align-items-center text-white">
                 <p class="m-0"><a class="text-white" href="">Home</a></p>
                 <i class="fa fa-circle px-3"></i>
-                <p class="m-0">Contact</p>
+                <p class="m-0">Relocate</p>
             </div>
         </div>
     </div>
@@ -155,41 +154,87 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 pb-4 pb-lg-0">
+                    <img class="img-fluid w-100" src="img/relocation.jpg" alt="">
                     <div class="bg-primary text-dark text-center p-4">
-                        <h4 class="m-0" style="color:white"><i class="fa fa-map-marker-alt text-white mr-2"></i>PORT SAEED, OPP CITY CENTER DEIRA, CITY AVENUE BUILDING</h4>
+                        <h3 class="m-0">Lets..Set..Move....</h3>
                     </div>
-                    <iframe style="width: 100%; height: 470px;"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.5383897286115!2d55.3347643!3d25.2524682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5dbcc3d82ebf%3A0xba95c726f18bcda6!2sCity%20Avenue%20Building!5e0!3m2!1sen!2sin!4v1716791584493!5m2!1sen!2sin"
-                        frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
                 <div class="col-lg-7">
-                    <h6 class="text-primary text-uppercase font-weight-bold">Contact Us</h6>
-                    <h1 class="mb-4">Contact For Any Queries</h1>
+                    <h6 class="text-primary text-uppercase font-weight-bold"></h6>
+                    <h1 class="mb-4">Fill your details below..</h1>
                     <div class="contact-form bg-secondary" style="padding: 30px;">
                         <div id="success"></div>
-                        <form action="contact.php" method="post" novalidate="novalidate">
+                        <form action="relocate.php" method="post" novalidate="novalidate">
                             <div class="control-group">
-                                <input type="text" class="form-control border-0 p-4" id="name" name="name" placeholder="Your Name"
-                                    required="required" data-validation-required-message="Please enter your name" />
+                                <input type="text" class="form-control border-0 p-4" id="movefromcountry" name="movefromcountry" placeholder="Moving from which country ?"
+                                    required="required"  />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
-                                <input type="email" class="form-control border-0 p-4" id="mail" name="mail" placeholder="Your Email"
-                                    required="required" data-validation-required-message="Please enter your email" />
+                                <input type="text" class="form-control border-0 p-4" id="movefromcity" name="movefromcity" placeholder="Moving from which city ?"
+                                    required="required"  />
+                                <p class="help-block text-danger"></p>
+                                
+                            </div>
+                            <div class="control-group">
+                                <input type="text" class="form-control border-0 p-4" id="movetocountry" name="movetocountry" placeholder="Moving to which country ?"
+                                    required="required"  />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
-                                <input type="text" class="form-control border-0 p-4" id="subject" name="subject" placeholder="Subject"
-                                    required="required" data-validation-required-message="Please enter a subject" />
+                               
+                                <input type="text" class="form-control border-0 p-4"  id="movetocity" name="movetocity" placeholder="Moving to which city ?"
+                                required="required"  />
+                                <p class="help-block text-danger"></p>
+                              
+                            </div>
+                             <div class="control-group">
+                                <input type="text" class="form-control border-0 p-4"  id="period" name="period" placeholder="Ex: 1-2 Months"
+                                required="required" />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
-                                <textarea class="form-control border-0 py-3 px-4" rows="3" id="message" name="message" placeholder="Message"
-                                    required="required" data-validation-required-message="Please enter your message"></textarea>
+                                <input type="text" class="form-control border-0 p-4"  id="who" name="who" placeholder="Who is moving ?"
+                                required="required" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <input type="number" class="form-control border-0 p-4"  id="adult" name="adult" placeholder="How many adults ?"
+                                required="required" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <input type="number" class="form-control border-0 p-4"  id="children" name="children" placeholder="How many adults ?"
+                                required="required" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <input type="text" class="form-control border-0 p-4"  id="what" name="what" placeholder="What are you moving ?"
+                                required="required" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <input type="text" class="form-control border-0 p-4"  id="service" name="service" placeholder="Ex: School search , Home search"
+                                required="required" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <input type="text" class="form-control border-0 p-4"  id="name" name="name" placeholder="Your name"
+                                required="required" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <input type="email" class="form-control border-0 p-4"  id="email" name="email" placeholder="Your email address"
+                                required="required" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <input type="number" class="form-control border-0 p-4"  id="phone" name="phone" placeholder="Your contact number"
+                                required="required" />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div>
-                                <button class="btn btn-primary py-3 px-4" type="submit" id="sendMessageButton">Send Message</button>
+                                <button class="btn btn-primary py-3 px-4" type="submit" id="sendMessageButton">Submit</button>
                             </div>
                         </form>
                     </div>
