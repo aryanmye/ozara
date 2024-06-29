@@ -210,49 +210,50 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     
                 </div>
             </div>
-            <table class="table table-striped table-hover">
-                <thead>
-                    <tr>
-                        <th>Package Id</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Status</th>
-                        <th>Dispatched</th>
-                        
-                      
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
+        
 
-                        if ($result === false) {
-                            die("Query failed: " . mysqli_error($coni));
-                        }
+            <table class="table table-striped" style="background-color:#2A3A92; color:white;">
+  <thead>
+    <tr>
+      <th scope="col">Package ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Status</th>
+      <th scope="col">Dispatched</th>
+    </tr>
+  </thead>
+  <tbody>
+  <?php
 
-                        $rowCount = mysqli_num_rows($result);
+if ($result === false) {
+    die("Query failed: " . mysqli_error($coni));
+}
 
-                        if ($rowCount > 0) {
-                            while ($row = mysqli_fetch_assoc($result)) {
-                                $id = $row['id'];
-                                $name = $row['name'];
-                                $email = $row['email'];
-                                $status = $row['status'];
-                                $dispatch = $row['dispatch'];
+$rowCount = mysqli_num_rows($result);
 
-                                echo '<tr>
-                                        <td scope="row">' . $id . '</td>
-                                        <td>' .  $name . '</td>
-                                        <td>' . $email . '</td>
-                                        <td>' . $status . '</td>
-                                        <td>' . $dispatch . '</td>
-                                       
-                                    </tr>';
-                            }
-                        } else {
-                            echo "<tr><td colspan='6'>No record found.</td></tr>";
-                        }
-                    ?> 
-                </tbody>
-            </table>
+if ($rowCount > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        $id = $row['id'];
+        $name = $row['name'];
+        $email = $row['email'];
+        $status = $row['status'];
+        $dispatch = $row['dispatch'];
+
+        echo '<tr>
+                <td scope="row">' . $id . '</td>
+                <td>' .  $name . '</td>
+                <td>' . $email . '</td>
+                <td>' . $status . '</td>
+                <td>' . $dispatch . '</td>
+               
+            </tr>';
+    }
+} else {
+    echo "<tr><td colspan='6'>No record found.</td></tr>";
+}
+?> 
+    
+  </tbody>
+</table>
         </div>
         </html>

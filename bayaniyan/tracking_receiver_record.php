@@ -210,53 +210,49 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     
                 </div>
             </div>
-            <table class="table table-striped table-hover">
-                <thead>
-                    <tr>
-                        <th>Package Id</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Status</th>
-                        <th>Dispatched</th>
-                        <th>Estimated Delivery Date</th>
-                        
-                      
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
+            <table class="table table-striped" style="background-color:#2A3A92; color:white;">
+  <thead>
+    <tr>
+      <th scope="col">Package ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Status</th>
+      <th scope="col">Dispatched</th>
+    </tr>
+  </thead>
+  <tbody>
+  <?php
 
-                        if ($result === false) {
-                            die("Query failed: " . mysqli_error($coni));
-                        }
+if ($result === false) {
+    die("Query failed: " . mysqli_error($coni));
+}
 
-                        $rowCount = mysqli_num_rows($result);
+$rowCount = mysqli_num_rows($result);
 
-                        if ($rowCount > 0) {
-                            while ($row = mysqli_fetch_assoc($result)) {
-                                $id = $row['id'];
-                                $name = $row['name'];
-                                $email = $row['email'];
-                                $status = $row['status'];
-                                $dispatch = $row['dispatch_date'];
-                                $esdate=$row['estimate_date'];
+if ($rowCount > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        $id = $row['id'];
+        $name = $row['name'];
+        $email = $row['email'];
+        $status = $row['status'];
+        $dispatch = $row['dispatch'];
 
-
-                                echo '<tr>
-                                        <td scope="row">' . $id . '</td>
-                                        <td>' .  $name . '</td>
-                                        <td>' . $email . '</td>
-                                        <td>' . $status . '</td>
-                                        <td>' . $dispatch . '</td>
-                                        <td>' . $esdate . '</td>
-                                       
-                                    </tr>';
-                            }
-                        } else {
-                            echo "<tr><td colspan='6'>No record found.</td></tr>";
-                        }
-                    ?> 
-                </tbody>
-            </table>
+        echo '<tr>
+                <td scope="row">' . $id . '</td>
+                <td>' .  $name . '</td>
+                <td>' . $email . '</td>
+                <td>' . $status . '</td>
+                <td>' . $dispatch . '</td>
+               
+            </tr>';
+    }
+} else {
+    echo "<tr><td colspan='6'>No record found.</td></tr>";
+}
+?> 
+    
+  </tbody>
+</table>
+               
         </div>
         </html>
