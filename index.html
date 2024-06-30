@@ -14,20 +14,22 @@
    
 
 	<!-- CSS here -->
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-	<link rel="stylesheet" href="assets/css/slicknav.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/slicknav.css">
     <link rel="stylesheet" href="assets/css/flaticon.css">
     <link rel="stylesheet" href="assets/css/hamburgers.min.css">
     <link rel="stylesheet" href="assets/css/gijgo.css">
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/animated-headline.css">
-	<link rel="stylesheet" href="assets/css/magnific-popup.css">
-	<link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-	<link rel="stylesheet" href="assets/css/themify-icons.css">
-	<link rel="stylesheet" href="assets/css/slick.css">
-	<link rel="stylesheet" href="assets/css/nice-select.css">
-	<link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     
 </head>
 <style>
@@ -193,13 +195,41 @@ transition: 1s ease;
     animation-name: fadeInUp;
 }
 
-.herovideo
-{
-    width: 100%; 
-    height: 100%;
-    position: absolute;
-}
-@media (max-width: 375px) {
+
+
+
+    .slider-area {
+            position: relative;
+        }
+        .slide-full {
+            position: relative;
+        }
+        .owl-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            z-index: 10;
+        }
+        .owl-nav button {
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .owl-nav button:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+        .herovideo {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            object-fit: cover;
+        }
+        @media (max-width: 375px) {
         #herovideo video{
             width: 100%;
             height: 100% !important;
@@ -286,125 +316,128 @@ transition: 1s ease;
     </div>
     <!-- Preloader Start -->
    
-    <script>
-        $(document).ready(function(){
-            $('.owl-carousel').owlCarousel({
-                items: 1,
-                loop: true,
-                nav: true,
-                dots: true,
-                autoplay: true,
-                autoplayTimeout: 2000, // 7 seconds
-                autoplayHoverPause: false
-            });
-        });
-    </script>
+   
+    
     <!-- header end -->
     <main>
         <!--? slider-area start -->
-		<div class="slider-area">
-			<div class="slider-full-active owl-carousel custom-dots">
-				<div class="slide-full slider-height d-flex align-items-center" style="background-image: url(assets/img/hero/globalpartner.png);">
-					<div class="container">
-						<div class="row">
-							<div class="col-xl-6 col-lg-8 col-md-7 col-sm-8">
-								<div class="slide-full-content">
-                                    <span>#1 Group in Dubai</span>
-									<h1>Innovation,<br> Efficiency, Sustainable Growth </h1>
-									<p> Dubai's Most Trusted Global Partner</p>
-									<a class="btn" href="contact.php">Contact Us</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="slide-full d-flex slider-height align-items-center">
-                    <video autoplay loop muted src="assets/img/gallery/herovid.mp4" class="herovideo" ></video>
-					<div class="container">
-						<div class="row">  
-							<div class="col-xl-6 col-lg-8 col-md-7 col-sm-8">
-								<div class="slide-full-content" >
-                                    <span class="mobile-view">Your Global  Partner</span>
-									<h1>Your Reliable<br> 
-                                        Shipping Partner
-                                    </h1>
-									<p>Freight-forwarding , Shipping , Logistics and much more...</p>
-									<a class="btn" href="contact.php">Contact Us</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-                <div class="slide-full d-flex slider-height align-items-center">
-                    <video autoplay loop muted src="assets/img/gallery/wv.mp4" class="herovideo" ></video>
-					<div class="container">
-						<div class="row">  
-							<div class="col-xl-6 col-lg-8 col-md-7 col-sm-8">
-								<div class="slide-full-content" >
-                                    <span class="mobile-view">Optimize Your Supply Chain</span>
-									<h1>Reliable & Comprehensive<br> 
-                                        Warehousing Services</h1>
-									<p>Freight-forwarding , Shipping , Logistics and much more...</p>
-									<a class="btn" href="contact.php">Contact Us</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-				<div class="slide-full d-flex slider-height align-items-center" >
-                    <video autoplay loop muted src="assets/img/gallery/petroleumvid.mp4" class="herovideo" ></video>
-
-					<div class="container">
-						<div class="row">
-							<div class="col-xl-6 col-lg-8 col-md-7 col-sm-8">
-								<div class="slide-full-content">
-                                    <span class="mobile-view">A Player From UAE For The World</span>
-									<h1>Purity<br> Trust And Reliability</h1>
-									<p>one of the main trader for the
-                                        various oil producing companies</p>
-									<a class="btn" href="contact.php">Contact Us</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-                <div class="slide-full d-flex slider-height align-items-center">
-                    <video autoplay loop muted src="assets/img/gallery/investment.mp4" class="herovideo" ></video>
-
-					<div class="container">
-						<div class="row">
-							<div class="col-xl-6 col-lg-8 col-md-7 col-sm-8">
-								<div class="slide-full-content">
-                                    <span class="mobile-view">Expertise And Commitment To Excellence</span>
-									<h1>Empowering<br> Your Financial Future</h1>
-									<p>we prioritize transparency and trust, fostering long-term relationships</p>
-									<a class="btn" href="contact.php">Contact Us</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-                <div class="slide-full d-flex slider-height align-items-center">
-                    <video autoplay loop muted src="assets/img/gallery/trading.mp4" class="herovideo" ></video>
-
-					<div class="container">
-						<div class="row">
-							<div class="col-xl-6 col-lg-8 col-md-7 col-sm-8">
-								<div class="slide-full-content">
-                                    <span class="mobile-view">Global Trading Excellence</span>
-									<h1>Efficient & Secure<br>Trading Services</h1>
-									<p>we prioritize transparency and trust, fostering long-term relationships</p>
-									<a class="btn" href="contact.php">Contact Us</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-                
-			</div>
-		</div>
+		<main>
+            <div class="slider-area">
+                <div class="slider-full-active owl-carousel custom-dots">
+                    <div class="slide-full slider-height d-flex align-items-center" style="background-image: url(assets/img/hero/globalpartner.png);">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-8 col-md-7 col-sm-8">
+                                    <div class="slide-full-content">
+                                        <span>#1 Group in Dubai</span>
+                                        <h1>Innovation,<br> Efficiency, Sustainable Growth</h1>
+                                        <p> Dubai's Most Trusted Global Partner</p>
+                                        <a class="btn" href="contact.php">Contact Us</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide-full d-flex slider-height align-items-center">
+                        <video autoplay loop muted src="assets/img/gallery/herovid.mp4" class="herovideo"></video>
+                        <div class="container">
+                            <div class="row">  
+                                <div class="col-xl-6 col-lg-8 col-md-7 col-sm-8">
+                                    <div class="slide-full-content">
+                                        <span class="mobile-view">Your Global  Partner</span>
+                                        <h1>Your Reliable<br> Shipping Partner</h1>
+                                        <p>Freight-forwarding , Shipping , Logistics and much more...</p>
+                                        <a class="btn" href="contact.php">Contact Us</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide-full d-flex slider-height align-items-center">
+                        <video autoplay loop muted src="assets/img/gallery/wv.mp4" class="herovideo"></video>
+                        <div class="container">
+                            <div class="row">  
+                                <div class="col-xl-6 col-lg-8 col-md-7 col-sm-8">
+                                    <div class="slide-full-content">
+                                        <span class="mobile-view">Optimize Your Supply Chain</span>
+                                        <h1>Reliable & Comprehensive<br> Warehousing Services</h1>
+                                        <p>Freight-forwarding , Shipping , Logistics and much more...</p>
+                                        <a class="btn" href="contact.php">Contact Us</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide-full d-flex slider-height align-items-center">
+                        <video autoplay loop muted src="assets/img/gallery/petroleumvid.mp4" class="herovideo"></video>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-8 col-md-7 col-sm-8">
+                                    <div class="slide-full-content">
+                                        <span class="mobile-view">A Player From UAE For The World</span>
+                                        <h1>Purity<br> Trust And Reliability</h1>
+                                        <p>one of the main trader for the various oil producing companies</p>
+                                        <a class="btn" href="contact.php">Contact Us</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide-full d-flex slider-height align-items-center">
+                        <video autoplay loop muted src="assets/img/gallery/investment.mp4" class="herovideo"></video>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-8 col-md-7 col-sm-8">
+                                    <div class="slide-full-content">
+                                        <span class="mobile-view">Expertise And Commitment To Excellence</span>
+                                        <h1>Empowering<br> Your Financial Future</h1>
+                                        <p>we prioritize transparency and trust, fostering long-term relationships</p>
+                                        <a class="btn" href="contact.php">Contact Us</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide-full d-flex slider-height align-items-center">
+                        <video autoplay loop muted src="assets/img/gallery/trade.mp4" class="herovideo"></video>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-8 col-md-7 col-sm-8">
+                                    <div class="slide-full-content">
+                                        <span class="mobile-view">Global Trading Excellence</span>
+                                        <h1>Efficient & Secure<br>Trading Services</h1>
+                                        <p>we prioritize transparency and trust, fostering long-term relationships</p>
+                                        <a class="btn" href="contact.php">Contact Us</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </main>
+    
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('.slider-full-active').owlCarousel({
+                    loop: true,
+                    margin: 10,
+                    nav: true,
+                    navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
+                    items: 1,
+                    autoplay: true,
+                    autoplayTimeout: 5000,
+                    autoplayHoverPause: true
+                });
+            });
+        </script>
+            
+		
+       
+    
         
 		<!-- slider-area end -->
         <!--? About Start-->
@@ -943,7 +976,7 @@ transition: 1s ease;
                 <div class="row">
                     <div class="col-lg-6 col-md-10">
                         <div class="experience-caption">
-                            <h2>High Quality products and over 25+ years of expertise in Petroleum sector</h2>
+                            <h2>High Quality products and over 12+ years of expertise in Petroleum sector</h2>
                             <p>We are mainly focused on Imports, Exports, International and
                                 Local Trading of crude oil and refined products.
                                 We Ozara Petroleum is bound to work under the control of UAE

@@ -35,8 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['name'];
     $mailid = $_POST['mail'];
     $period = $_POST['period'];
-    $adult = $_POST['adult'];
-    $child = $_POST['child'];
+    
     $who = $_POST['who'];
     $what = $_POST['what'];
     $adult = $_POST['adult'];
@@ -103,8 +102,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                  <p><strong>How is moving:</strong> $who</p>
                  <p><strong>What they want to move:</strong> $what</p>
                  <p><strong>For how man days:</strong> $period</p>
-                 <p><strong>How many adults:</strong> $adult</p>
-                 <p><strong>How many children:</strong> $child</p>
+                
                   <p><strong>Service needed:</strong> $service</p>
                 
                  

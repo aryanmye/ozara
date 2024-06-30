@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <script src="assets/css/jquery.min.js"></script>
+    <script src="assets/css/owl.carousel.min.js"></script>
+    <style>
+        .owl-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .owl-nav button {
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .owl-nav button:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .owl-nav .owl-prev {
+            position: absolute;
+            left: 10px;
+        }
+
+        .owl-nav .owl-next {
+            position: absolute;
+            right: 10px;
+        }
+    </style>
+    <title>Owl Carousel with Navigation</title>
+</head>
+<body>
+    <div class="slider-area">
+        <div class="slider-full-active owl-carousel custom-dots">
+            <div class="slide-full slider-height d-flex align-items-center" style="background-image: url(assets/img/hero/globalpartner.png);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-8 col-md-7 col-sm-8">
+                            <div class="slide-full-content">
+                                <span>#1 Group in Dubai</span>
+                                <h1>Innovation,<br> Efficiency, Sustainable Growth </h1>
+                                <p> Dubai's Most Trusted Global Partner</p>
+                                <a class="btn" href="contact.php">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add additional slides here -->
+        </div>
+        <div class="owl-nav">
+            <button type="button" role="presentation" class="owl-prev"><i class="fa fa-chevron-left"></i></button>
+            <button type="button" role="presentation" class="owl-next"><i class="fa fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('.slider-full-active').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                navText: ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
+                items: 1,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true
+            });
+        });
+    </script>
+</body>
+</html>

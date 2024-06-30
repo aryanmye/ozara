@@ -2603,6 +2603,7 @@ hr {
     color: #fff;
     display: block;
     font-weight: 300;
+    font-size: small;
     padding: 29px 24px;
     text-transform: capitalize
 }
