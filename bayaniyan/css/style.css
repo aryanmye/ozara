@@ -9270,11 +9270,11 @@ button.bg-dark:focus {
 }
 
 .text-white {
-  color: #fff !important;
+  color: #fff ;
 }
 
 .text-primary {
-  color: white !important;
+  color: white;
 }
 
 a.text-primary:hover, a.text-primary:focus {

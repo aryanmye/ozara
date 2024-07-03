@@ -2722,11 +2722,11 @@ hr {
 nav.nav-menu-show {
     margin-right: 50px;
     opacity: 1;
-    visibility: visible
+    visibility: visible 
 }
 
 .main-menu.black-menu ul li a {
-    color: #fff;
+    color: #fff ;
     padding: 35px 0
 }
 
@@ -2739,7 +2739,8 @@ nav.nav-menu-show {
 }
 
 .header-sticky.sticky-bar {
-    background: #000
+    background: #000 ;
+  
 }
 
 .header-sticky.sticky-bar.sticky .main-menu ul li a {
@@ -2854,7 +2855,7 @@ nav.nav-menu-show {
 }
 
 .slider-area2 {
-    background-image: url(../img/hero/hero2.png);
+    background-image: url(../img/gallery/airfinfo.jpg);
     background-repeat: no-repeat;
     background-size: cover
 }
@@ -3260,6 +3261,7 @@ nav.nav-menu-show {
     display: block;
     font-size: 50px;
     text-align: center;
+    align-items: center;
     margin-bottom: 42px;
     -webkit-transition: .5s;
     -moz-transition: .5s;
@@ -3283,7 +3285,8 @@ nav.nav-menu-show {
 
 .service-area .services-caption .service-cap p {
     color: #717081;
-    font-size: 15px
+    font-size: 15px;
+    text-align: center justify center;
 }
 
 .services-caption:hover .service-icon i {

@@ -71,12 +71,7 @@ function getInitials($name) {
                         </div>
                         <div class="col-xl-9 col-lg-10">
 							<div class="main-menu black-menu menu-bg-white d-none d-lg-block">
-								<div class="hamburger hamburger--collapse">
-									<div class="hamburger-box">
-										<div class="hamburger-inner"></div>
-									</div>
-								</div>
-								<nav class="hamburger-menu">
+								
 									<ul id="navigation">
 										<li><a href="index.html">Home</a></li>
 										<li><a href="about.php">About</a></li>
@@ -88,7 +83,7 @@ function getInitials($name) {
 
                </li>
 									</ul>
-								</nav>
+								
 							</div>
 						</div>
                        
