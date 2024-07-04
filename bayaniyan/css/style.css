@@ -9552,7 +9552,7 @@ p,
 }
 
 .jumbotron {
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/philli.jpg);
+  background: linear-gradient(rgb(85 84 84 / 80%), rgb(8 7 7 / 80%)), url(../img/philli.jpg);
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
