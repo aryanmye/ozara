@@ -3170,8 +3170,8 @@ nav.nav-menu-show {
     }
 }
 .responsive-img{
-    width: 456px; 
-    height: 635px;
+    width: 400px; 
+    height: 560px;
     
 }
 
@@ -3860,7 +3860,7 @@ nav.nav-menu-show {
 .single-team .team-caption h3 a {
     color: #1d2434;
     font-weight: 600;
-    font-size: 35px
+    font-size: 25px
 }
 
 .single-team:hover .team-img img {
